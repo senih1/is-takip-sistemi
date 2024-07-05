@@ -1,0 +1,14 @@
+﻿@model List<TaskModel>
+
+@foreach(var task in Model)
+{
+    {
+        <div>
+            @task.Name
+            @task.CreateTime.ToString("dd.MM.yyyy HH:mm")
+
+            <a href="/admin/delete/@task.Id" onclick="return confirm('Emin misin?')" class="btn btn-danger">Sil</a>
+
+        </div>
+    }
+}

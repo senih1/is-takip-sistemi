@@ -1,0 +1,15 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@model TaskModel
+<br />
+<br />
+<h2>@Model.Name</h2>
+<hr />
+<p>@Model.Detail</p>
+<br />
+<br />
+<p><strong>Atanan Kişi : @Model.Username</strong></p>
+<p><strong>İşin Açılma Tarihi : @Model.CreateTime.ToString("dd MMMM yyyy hh:mm")</strong></p>
+<a href="/admin/edit/@Model.Id" class="btn btn-primary">Düzenle</a>
+<a href="/admin/delete/@Model.Id" onclick="return confirm('Emin misin?')" class="btn btn-danger">Sil</a>
